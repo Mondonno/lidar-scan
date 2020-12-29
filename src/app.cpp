@@ -25,8 +25,7 @@ App::App(std::vector<std::string>& args) {
   RPLIDARScanModes mode;
   unsigned mode_temp = unsigned(RPLIDARScanModes::SENSITIVITY);
   std::stringstream(get_arg_value(args, "-m", "--mode")) >> mode_temp;
-  mode = static_cast<RPLIDARScanModes>(mode_temp %
-                                       unsigned(RPLIDARScanModes::RPLIDAR_SCAN_MODES_COUNT));
+  mode = static_cast<RPLIDARScanModes>(mode_temp % unsigned(RPLIDARScanModes::RPLIDAR_SCAN_MODES_COUNT));
 
   // Initialize objects
   cloud_ = std::make_unique<CloudCyl>();
