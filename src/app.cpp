@@ -1,3 +1,5 @@
+// ADD SOME COMMENTS TO GET HOW IT WORKS!
+
 #include "../include/app.hpp"
 #include <algorithm>
 
